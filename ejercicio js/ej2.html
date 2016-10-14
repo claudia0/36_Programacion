@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>	
+    <meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<button id="btn-en" style="inline-block; background-color: aqua">English</button>
+	<button id="btn-es" style="background-color: orange">Español</button>
+	<p id="user">U</p>
+	<input type="text" id="users" placeholder="Usuario">
+	<p id="password">C</p>
+	<input type="text" id="contrasena" placeholder="Contraseña">
+
+<script type="text/javascript">
+
+ 	var btnEs = document.getElementById("btn-es");
+ 	var btnEn = document.getElementById("btn-en");
+
+ 	function cambiarIdioma(idioma) {
+    
+		var elUser = document.getElementById("user");
+		var elPassword = document.getElementById("password");
+    	var elPassword2 = document.getElementById("contrasena");
+    	var elUser2 = document.getElementById("users");
+        
+        if (idioma == "es"){
+        	elUser.innerHTML = "Usuario";
+        	elPassword.innerHTML = "Contraseña";
+        	elPassword2.setAttribute("placeholder","Contraseña");
+        	elUser2.setAttribute("placeholder", "usuario");
+        }
+        else if (idioma == "en"){
+        	elUser.innerHTML = "User";
+        	elPassword.innerHTML = "Password";
+        	elPassword2.setAttribute("placeholder", "Password");
+        	elUser2.setAttribute("placeholder", "User");
+        }
+
+    }
+
+
+    btnEs.onclick = function(){
+    	cambiarIdioma ("es");
+    }
+    btnEn.onclick = function(){
+    	cambiarIdioma ("en");
+    }
+
+</script>
+</body>
+</html>
